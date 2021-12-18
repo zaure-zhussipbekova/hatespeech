@@ -18,7 +18,7 @@ def read_files(files_path):
 
 
 def predict_lang(df,column):
-  ! pip install fastlangid
+  #! pip install fastlangid
   from fastlangid.langid import LID
   langid = LID()
   df['Language'] =langid.predict(df[column].astype(str))
